@@ -7,12 +7,15 @@ let dog_string = "Hello Max, my name is Dog, and I have purple eyes!"
 let dog_names = ["Max","HAS","PuRple","dog"]
 
 function findWords(){
+    let empty = dog_names.length
     for(let i = 0; i < dog_names.length; i++){
         if( dog_string.indexOf(dog_names[i]) > -1){
         return "Matched " + dog_names[i] 
         } else {
-            return 'No Matches'
+            empty = empty - 1
         }
+    }if (empty == 0){
+        return 'No Matches'
     }
 }
 
